@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPS.Domain", "TPS.Domain\TPS.Domain.csproj", "{32384B15-6E27-4C64-AE83-FA78160BB5DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC Web App", "MVC Web App\MVC Web App.csproj", "{D33F73DB-87EA-48EE-AC10-52F2B7093F5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC Web App", "MVC Web App\MVC Web App.csproj", "{D33F73DB-87EA-48EE-AC10-52F2B7093F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HookIn", "HookIn\HookIn.csproj", "{940BB664-AE5B-406D-BFE4-EC982C414ED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS.Service", "TPS.Service\TPS.Service.csproj", "{6790BFE5-B154-468C-8005-94435FC5B212}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{D33F73DB-87EA-48EE-AC10-52F2B7093F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D33F73DB-87EA-48EE-AC10-52F2B7093F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D33F73DB-87EA-48EE-AC10-52F2B7093F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{940BB664-AE5B-406D-BFE4-EC982C414ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{940BB664-AE5B-406D-BFE4-EC982C414ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{940BB664-AE5B-406D-BFE4-EC982C414ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{940BB664-AE5B-406D-BFE4-EC982C414ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6790BFE5-B154-468C-8005-94435FC5B212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6790BFE5-B154-468C-8005-94435FC5B212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6790BFE5-B154-468C-8005-94435FC5B212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6790BFE5-B154-468C-8005-94435FC5B212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
