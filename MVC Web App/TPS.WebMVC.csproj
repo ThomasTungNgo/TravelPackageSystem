@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TPS.Domain\TPS.Domain.csproj" />
+    <ProjectReference Include="..\TPS.Service\TPS.Service.csproj" />
   </ItemGroup>
 
 </Project>

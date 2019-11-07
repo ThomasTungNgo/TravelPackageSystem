@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 using MVC_Web_App.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TPS.Domain;
+using TPS.Service;
 
 namespace MVC_Web_App
 {
@@ -41,6 +43,9 @@ namespace MVC_Web_App
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddDbContext<TPSDbContext>(ServiceLifetime.Scoped);
+            services.AddScoped<CityService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
