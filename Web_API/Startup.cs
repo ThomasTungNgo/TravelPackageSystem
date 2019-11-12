@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TPS.Domain;
+using TPS.Service;
 
 namespace Web_API
 {
@@ -26,6 +28,8 @@ namespace Web_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<TPSDbContext>(ServiceLifetime.Scoped);
+            services.AddScoped<CityService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

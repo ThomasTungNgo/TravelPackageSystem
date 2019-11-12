@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TPS.Domain;
+using TPS.Service;
 
 namespace Web_API.Controllers
 {
@@ -10,11 +12,19 @@ namespace Web_API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly CityService _service;
+
+        public ValuesController(CityService service)
+        {
+            _service = service;
+        }
+
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IEnumerable<City> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _service.GetTopOneHundred();
+            //return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5

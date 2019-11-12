@@ -30,9 +30,9 @@ namespace TPS.Service
             return ca;
         }
 
-        public string GetTopOneHundred()
+        public IEnumerable<City> GetTopOneHundred()
         {
-            return _context.Cities.Take(100).ToString();
+            return _context.Cities.Take(100).ToList();
         }
     }
 }
