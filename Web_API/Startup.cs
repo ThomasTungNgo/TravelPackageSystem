@@ -29,6 +29,7 @@ namespace Web_API
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<TPSDbContext>(ServiceLifetime.Scoped);
+            //Add DI to CityService
             services.AddScoped<CityService>();
         }
 

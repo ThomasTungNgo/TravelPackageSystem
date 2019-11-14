@@ -11,6 +11,6 @@ namespace TPS.Domain
         public TravelPackageCity TravelPackageCity { get; set; }
 
         public int CityAttractionId { get; set; }
-        public CityAttraction CityAttraction { get; set; }
+        public Attraction CityAttraction { get; set; }
     }
 }

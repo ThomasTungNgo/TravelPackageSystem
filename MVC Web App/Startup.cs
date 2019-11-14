@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TPS.Domain;
 using TPS.Service;
+using Westwind.AspNetCore.LiveReload;
 
 namespace MVC_Web_App
 {
@@ -47,6 +48,9 @@ namespace MVC_Web_App
             services.AddDbContext<TPSDbContext>(ServiceLifetime.Scoped);
             services.AddScoped<CityService>();
 
+            //Install-Package WestWind.AspnetCore.LiveReload
+            services.AddLiveReload();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -68,8 +72,8 @@ namespace MVC_Web_App
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
             app.UseAuthentication();
+            app.UseLiveReload(); //for live reloading
 
             app.UseMvc(routes =>
             {

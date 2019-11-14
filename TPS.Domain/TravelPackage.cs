@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace TPS.Domain
@@ -12,6 +14,8 @@ namespace TPS.Domain
             Cities = new List<TravelPackageCity>(); 
         }
         public int Id { get; set; }
+
+        [DisplayName("Package Name")]
         public string Name { get; set; }
         public string Description { get; set; }
         public int StatusId { get; private set; }
@@ -19,7 +23,7 @@ namespace TPS.Domain
         //recommended retail price
         public decimal RRP { get; set; }
 
-        public TravelPackageCity AddCity(City c,int days, params CityAttraction[] attractions)
+        public TravelPackageCity AddCity(City c,int days, params Attraction[] attractions)
         {
             var tpc = new TravelPackageCity
             {

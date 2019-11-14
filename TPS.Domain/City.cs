@@ -8,7 +8,7 @@ namespace TPS.Domain
     {
         public City()
         {
-            Attractions = new List<CityAttraction>(); 
+            Attractions = new List<Attraction>(); 
         }
         
         public int Id { get; set; }
@@ -18,6 +18,6 @@ namespace TPS.Domain
         public float Longitude { get; set; }
         public string Country { get; set; }
         public string Code { get; set; }
-        public List<CityAttraction> Attractions { get; set; }
+        public List<Attraction> Attractions { get; set; }
     }
 }

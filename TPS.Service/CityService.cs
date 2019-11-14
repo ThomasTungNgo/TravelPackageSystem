@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,9 @@ namespace TPS.Service
         }
 
         //Add a City Attraction
-        public CityAttraction AddAttraction (string name, string description, int cityId)
+        public Attraction AddAttraction (string name, string description, int cityId)
         {
-            var ca = new CityAttraction
+            var ca = new Attraction
             {
                 Name = name,
                 Description = description,
@@ -34,5 +35,10 @@ namespace TPS.Service
         {
             return _context.Cities.Take(100).ToList();
         }
+
+        public IEnumerable<City> GetCityAttractions(string name)
+        {
+            return _context.Cities.Include("CityAttraction").Where(c => c.Name == name);
+        } 
     }
 }

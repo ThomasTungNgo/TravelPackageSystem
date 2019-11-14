@@ -34,6 +34,13 @@ namespace Web_API.Controllers
             return "value";
         }
 
+        // POST api/values/"name"
+        [HttpGet("{name}")]
+        public IEnumerable<City> GetCityAttractions(string value)
+        {
+            return _service.GetCityAttractions(value);
+        }
+
         // POST api/values
         [HttpPost]
         public void Post([FromBody] string value)

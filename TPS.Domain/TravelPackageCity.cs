@@ -19,7 +19,7 @@ namespace TPS.Domain
         public int NumberOfDays { get; set; }
         public List<TravelPackageCityAttraction> TravelPackageCityAttractions { get; set; }
 
-        public TravelPackageCityAttraction AddAttraction(CityAttraction attraction)
+        public TravelPackageCityAttraction AddAttraction(Attraction attraction)
         {
             var tpca = new TravelPackageCityAttraction
             {
